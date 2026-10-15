@@ -12,6 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark;--bg:#090b0b;--panel:#141817;--ink:#f2f3ec;--muted:#adb3a9;--line:rgba(255,255,255,.15);--accent:#c9ff3d;font-family:"Space Grotesk",sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% 0%,rgba(201,255,61,.08),transparent 35%),var(--bg);color:var(--ink);line-height:1.65}.wrap{width:min(1000px,calc(100% - 40px));margin:0 auto}.top{border-bottom:1px solid var(--line);padding:22px 0}.brand{font-size:24px;font-weight:800;letter-spacing:-1px;color:inherit;text-decoration:none}.brand span{font-weight:400;color:#aeb4ad}.mark{color:var(--accent);margin-right:10px}.hero{padding:70px 0 35px}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-size:10px;font-weight:700}.hero h1{font:800 clamp(42px,7vw,70px)/.98 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:15px 0;letter-spacing:-1px}.hero p{color:var(--muted);max-width:680px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:25px 0 40px}.card{background:linear-gradient(145deg,rgba(255,255,255,.03),transparent 60%),var(--panel);border:1px solid var(--line);border-top:2px solid #68745b;padding:25px;min-height:190px}.card h2{font:700 27px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 12px}.card p{font-size:12px;color:var(--muted);margin:0 0 22px}.button{display:inline-block;background:var(--accent);color:#11150b;text-decoration:none;font-weight:700;font-size:11px;padding:12px 15px}.button.secondary{background:transparent;color:var(--ink);border:1px solid #5c6657}.notice{border-left:2px solid var(--accent);background:rgba(201,255,61,.055);padding:18px 20px;color:#cbd0c5;font-size:12px;margin:25px 0}.notice strong{color:var(--ink)}.schema{background:#080a09;border:1px solid var(--line);padding:16px;overflow:auto;color:#d9e6c2;font-size:12px;white-space:pre-wrap}.muted{color:var(--muted);font-size:12px}footer{border-top:1px solid var(--line);padding:20px 0;color:#858d81;font-size:11px}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:620px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}.card{min-height:0}}
+
+.manager{margin:35px 0 55px;padding:26px;border:1px solid var(--line);background:rgba(255,255,255,.02)}.editor{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:22px}.editor form{display:grid;align-content:start;gap:9px}.editor label{font-size:11px;font-weight:700;color:#d7ddcf}.editor input,.editor textarea{width:100%;min-width:0;background:#080a09;color:var(--ink);border:1px solid #4c5548;padding:12px;font:12px inherit;border-radius:0}.editor input:focus,.editor textarea:focus{outline:2px solid var(--accent);outline-offset:1px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.actions button{cursor:pointer;font:inherit;border:0}.actions .secondary{border:1px solid #5c6657}.list-panel h3{margin:0 0 12px;font-size:14px}.product-list{display:grid;gap:10px}.product-row{padding:14px;border:1px solid var(--line);background:#0b0e0c}.product-row strong{display:block;overflow-wrap:anywhere}.product-row p{font-size:12px;color:var(--muted);margin:5px 0}.product-row .actions{margin-top:9px}.product-row .button{padding:8px 10px}.export-actions{margin-top:22px}.schema{display:block;width:100%;margin-top:14px;min-height:160px;resize:vertical}.manager [hidden]{display:none!important}@media(max-width:700px){.editor{grid-template-columns:1fr}.manager{padding:18px}.actions .button{max-width:100%}}
 </style>
 </head>
 <body>
@@ -20,12 +22,34 @@
 <section class="hero"><div class="eyebrow">Site &amp; product management</div><h1>Keep the shop moving.</h1><p>Update the BZaudio product catalog, maintain the website, and check when changes are published. This page is intentionally simple so it stays easy to use.</p></section>
 <div class="notice"><strong>About access:</strong> There is no separate BZaudio password on this page. However, a public GitHub Pages website cannot securely save changes directly into its own files without an authorized write method. The links below open GitHub’s editor; you need to be signed in with repository edit access to publish changes. That keeps random visitors from adding or changing products on your behalf.</div>
 <section class="grid" aria-label="Management actions">
-<article class="card"><h2>01 / Add or edit products</h2><p>Update the product list that powers the Equipment Shop. Add a product name, category, description, price if confirmed, and optional image or product link.</p><a class="button" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/products.json">Edit shop catalog ↗</a></article>
-<article class="card"><h2>02 / Edit website copy</h2><p>Change service descriptions, training details, headlines, contact options, and other homepage content.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/index.html">Edit website content ↗</a></article>
-<article class="card"><h2>03 / Update the design</h2><p>Adjust the visual theme, responsive layouts, colors, spacing, and typography.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/styles.css">Edit site styling ↗</a></article>
-<article class="card"><h2>04 / Publish &amp; check</h2><p>Review automated checks and see whether the latest version has been deployed successfully.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/actions">Open deployment status ↗</a></article>
+<article class="card"><h2>01 / Add or edit products</h2><p>Update the product list that powers the Equipment Shop. Add a product name, category, description, price if confirmed, and optional image or product link.</p><a class="button" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/products.json">Edit shop catalog</a></article>
+<article class="card"><h2>02 / Edit website copy</h2><p>Change service descriptions, training details, headlines, contact options, and other homepage content.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/index.html">Edit website content</a></article>
+<article class="card"><h2>03 / Update the design</h2><p>Adjust the visual theme, responsive layouts, colors, spacing, and typography.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/styles.css">Edit site styling</a></article>
+<article class="card"><h2>04 / Publish &amp; check</h2><p>Review automated checks and see whether the latest version has been deployed successfully.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/actions">Open deployment status</a></article>
 </section>
-<section><p class="eyebrow">Product format</p><h2 style="font:700 30px 'Barlow Condensed',sans-serif;text-transform:uppercase">Example catalog entry</h2><p class="muted">The catalog is a JSON list. Add each item as an object inside the square brackets, separating multiple objects with commas. Use real product details and confirmed prices only.</p><pre class="schema">[
+
+<section class="manager">
+<p class="eyebrow">Product manager</p><h2 style="font:700 34px 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:8px 0">Build your product catalog</h2>
+<p class="muted">Add, edit, and remove items here. Export the finished JSON, then use the GitHub catalog editor to publish it. Changes in this editor are temporary until exported and committed to GitHub.</p>
+<div class="editor">
+<form id="product-form">
+<input type="hidden" id="edit-index" value="-1">
+<label for="p-name">Product name *</label><input id="p-name" required maxlength="120" placeholder="e.g. Digital mixing console">
+<label for="p-category">Category *</label><input id="p-category" required maxlength="80" placeholder="e.g. Mixers">
+<label for="p-description">Description *</label><textarea id="p-description" required maxlength="500" rows="3" placeholder="Short, accurate description"></textarea>
+<label for="p-price">Price (optional)</label><input id="p-price" maxlength="40" placeholder="Leave blank if not confirmed">
+<label for="p-image">Image URL (optional)</label><input id="p-image" type="url" placeholder="https://...">
+<label for="p-url">Product page URL (optional)</label><input id="p-url" type="url" placeholder="https://...">
+<div class="actions"><button class="button" type="submit" id="save-product">Add product</button><button class="button secondary" type="button" id="cancel-edit" hidden>Cancel edit</button></div>
+<p id="manager-status" class="muted" role="status" aria-live="polite">Loading the current catalog…</p>
+</form>
+<div class="list-panel"><h3>Current working list</h3><div id="product-list" class="product-list"><p class="muted">Loading…</p></div></div>
+</div>
+<div class="actions export-actions"><button class="button" type="button" id="export-json">Download products.json</button><button class="button secondary" type="button" id="show-json">Show JSON to copy</button><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/products.json" target="_blank" rel="noopener noreferrer">Open GitHub catalog editor</a></div>
+<textarea id="json-output" class="schema" rows="10" aria-label="Exported product JSON" hidden spellcheck="false"></textarea>
+<p class="muted">Publishing checklist: download the file, open the GitHub catalog editor, replace the file contents with the exported JSON, commit the change, and wait for the deployment workflow to pass.</p>
+</section>
+\n<section><p class="eyebrow">Product format</p><h2 style="font:700 30px 'Barlow Condensed',sans-serif;text-transform:uppercase">Example catalog entry</h2><p class="muted">The catalog is a JSON list. Add each item as an object inside the square brackets, separating multiple objects with commas. Use real product details and confirmed prices only.</p><pre class="schema">[
   {
     "name": "Product name",
     "category": "Speakers",
@@ -38,5 +62,38 @@
 <div style="padding:35px 0 60px"><a class="button secondary" href="../">← Return to public website</a></div>
 </main>
 <footer><div class="wrap">BZaudio · Site &amp; product management · Product inquiries: benrz101@gmail.com</div></footer>
-</body>
+
+<script>
+(() => {
+ const $ = id => document.getElementById(id);
+ const form=$('product-form'), list=$('product-list'), status=$('manager-status'), output=$('json-output');
+ let products=[];
+ const fields=['name','category','description','price','image_url','product_url'];
+ const safe=value=>String(value??'').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+ const setStatus=msg=>{status.textContent=msg};
+ function render(){
+  list.innerHTML=products.length?products.map((p,i)=>'<article class="product-row"><strong>'+safe(p.name)+'</strong><p>'+safe(p.category)+' · '+safe(p.price||'Price not listed')+'</p><p>'+safe(p.description)+'</p><div class="actions"><button class="button secondary" type="button" data-edit="'+i+'">Edit</button><button class="button secondary" type="button" data-remove="'+i+'">Remove</button></div></article>').join(''):'<p class="muted">No products yet. Add the first product using the form.</p>';
+ }
+ function reset(){form.reset();$('edit-index').value='-1';$('save-product').textContent='Add product';$('cancel-edit').hidden=true}
+ form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const p={name:$('p-name').value.trim(),category:$('p-category').value.trim(),description:$('p-description').value.trim()};
+  [['price','p-price'],['image_url','p-image'],['product_url','p-url']].forEach(([key,id])=>{const v=$(id).value.trim();if(v)p[key]=v});
+  if(!p.name||!p.category||!p.description){setStatus('Please complete the required fields.');return}
+  const index=Number($('edit-index').value);
+  if(index>=0&&index<products.length){products[index]=p;setStatus('Product updated in this working list. Export to save it.')}else{products.push(p);setStatus('Product added to this working list. Export to save it.')}
+  reset();render();
+ });
+ list.addEventListener('click',e=>{
+  const edit=e.target.closest('[data-edit]'), remove=e.target.closest('[data-remove]');
+  if(edit){const i=Number(edit.dataset.edit),p=products[i];if(!p)return;$('edit-index').value=String(i);$('p-name').value=p.name||'';$('p-category').value=p.category||'';$('p-description').value=p.description||'';$('p-price').value=p.price||'';$('p-image').value=p.image_url||'';$('p-url').value=p.product_url||'';$('save-product').textContent='Save changes';$('cancel-edit').hidden=false;form.scrollIntoView({behavior:'smooth',block:'start'});setStatus('Editing '+p.name+'.');}
+  if(remove){const i=Number(remove.dataset.remove);if(i>=0&&i<products.length&&confirm('Remove '+products[i].name+' from this working list?')){products.splice(i,1);render();setStatus('Product removed from this working list. Export to save the change.')}}
+ });
+ $('cancel-edit').addEventListener('click',reset);
+ function json(){return JSON.stringify(products,null,2)+'\n'}
+ $('show-json').addEventListener('click',()=>{output.hidden=false;output.value=json();output.focus();output.select();setStatus('JSON ready to copy. Use Select All and Copy if needed.')});
+ $('export-json').addEventListener('click',()=>{const blob=new Blob([json()],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='products.json';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);output.hidden=false;output.value=json();setStatus('Downloaded products.json. Upload its contents through the GitHub catalog editor to publish.')});
+ fetch('../products.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Could not load products.json');return r.json()}).then(data=>{if(!Array.isArray(data))throw new Error('Catalog must be a JSON array');products=data.map(p=>{const q={};fields.forEach(k=>{if(p&&p[k]!=null&&String(p[k]).trim())q[k]=String(p[k])});return q}).filter(p=>p.name&&p.category&&p.description);render();setStatus('Loaded '+products.length+' product(s). Changes here are temporary until exported and committed.');}).catch(()=>{products=[];render();setStatus('Could not load the existing catalog. You can still build a new list, but check the catalog file before publishing.')});
+})();
+</script>\n</body>
 </html>
