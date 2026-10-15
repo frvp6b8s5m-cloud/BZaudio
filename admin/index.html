@@ -3,25 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101112">
-<title>BZaudio | Site Management</title>
+<meta name="theme-color" content="#090b0b">
+<meta name="description" content="Manage BZaudio's website and product catalog.">
+<title>BZaudio | Shop & Site Manager</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--bg:#101112;--panel:#191b1c;--ink:#f4f3ef;--muted:#a4a7a7;--line:rgba(255,255,255,.13);--accent:#d9a65e;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,rgba(217,166,94,.09),transparent 35%),var(--bg);color:var(--ink);line-height:1.65}.wrap{width:min(920px,calc(100% - 40px));margin:0 auto}.top{border-bottom:1px solid var(--line);padding:22px 0}.brand{font-size:22px;font-weight:800;letter-spacing:-1px}.brand span{font-weight:400;color:#b9b9b5}.mark{color:var(--accent);margin-right:10px}.hero{padding:74px 0 45px}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-size:11px;font-weight:700}.hero h1{font-size:clamp(36px,7vw,62px);line-height:1.08;letter-spacing:-2.5px;margin:15px 0}.hero p{color:var(--muted);max-width:650px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:25px 0 50px}.card{background:var(--panel);border:1px solid var(--line);padding:25px;min-height:205px}.card h2{font-size:19px;margin:0 0 8px}.card p{font-size:13px;color:var(--muted);margin:0 0 22px}.button{display:inline-block;background:var(--accent);color:#171717;text-decoration:none;font-weight:700;font-size:12px;padding:12px 15px}.button.secondary{background:transparent;color:var(--ink);border:1px solid #555}.notice{border-left:2px solid var(--accent);background:rgba(217,166,94,.07);padding:17px 20px;color:#d1d1cc;font-size:13px;margin:28px 0}.notice strong{color:var(--ink)}footer{border-top:1px solid var(--line);padding:20px 0;color:#858987;font-size:11px}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:600px){.grid{grid-template-columns:1fr}.hero{padding-top:52px}.card{min-height:0}}
+:root{color-scheme:dark;--bg:#090b0b;--panel:#141817;--ink:#f2f3ec;--muted:#adb3a9;--line:rgba(255,255,255,.15);--accent:#c9ff3d;font-family:"Space Grotesk",sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% 0%,rgba(201,255,61,.08),transparent 35%),var(--bg);color:var(--ink);line-height:1.65}.wrap{width:min(1000px,calc(100% - 40px));margin:0 auto}.top{border-bottom:1px solid var(--line);padding:22px 0}.brand{font-size:24px;font-weight:800;letter-spacing:-1px;color:inherit;text-decoration:none}.brand span{font-weight:400;color:#aeb4ad}.mark{color:var(--accent);margin-right:10px}.hero{padding:70px 0 35px}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-size:10px;font-weight:700}.hero h1{font:800 clamp(42px,7vw,70px)/.98 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:15px 0;letter-spacing:-1px}.hero p{color:var(--muted);max-width:680px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:25px 0 40px}.card{background:linear-gradient(145deg,rgba(255,255,255,.03),transparent 60%),var(--panel);border:1px solid var(--line);border-top:2px solid #68745b;padding:25px;min-height:190px}.card h2{font:700 27px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 12px}.card p{font-size:12px;color:var(--muted);margin:0 0 22px}.button{display:inline-block;background:var(--accent);color:#11150b;text-decoration:none;font-weight:700;font-size:11px;padding:12px 15px}.button.secondary{background:transparent;color:var(--ink);border:1px solid #5c6657}.notice{border-left:2px solid var(--accent);background:rgba(201,255,61,.055);padding:18px 20px;color:#cbd0c5;font-size:12px;margin:25px 0}.notice strong{color:var(--ink)}.schema{background:#080a09;border:1px solid var(--line);padding:16px;overflow:auto;color:#d9e6c2;font-size:12px;white-space:pre-wrap}.muted{color:var(--muted);font-size:12px}footer{border-top:1px solid var(--line);padding:20px 0;color:#858d81;font-size:11px}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}@media(max-width:620px){.grid{grid-template-columns:1fr}.hero{padding-top:48px}.card{min-height:0}}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="brand" href="../" style="color:inherit;text-decoration:none"><span class="mark">▥</span>BZ<span>audio</span></a></div></header>
+<header class="top"><div class="wrap"><a class="brand" href="../"><span class="mark">▥</span>BZ<span>audio</span></a></div></header>
 <main class="wrap">
-<section class="hero"><div class="eyebrow">GitHub site management</div><h1>Manage the BZaudio website.</h1><p>Use the official GitHub repository to update the live site. GitHub handles account sign-in, edit history, and publishing when approved changes are committed.</p></section>
-<div class="notice"><strong>Important:</strong> GitHub Pages is a static hosting service. This page does not pretend to be a database-backed admin system or accept passwords. Website changes are made in GitHub and published by the existing deployment workflow.</div>
-<section class="grid" aria-label="Site management links">
-<article class="card"><h2>Website content</h2><p>Edit the main website copy, service descriptions, equipment section, and contact form layout.</p><a class="button" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/index.html">Edit website content ↗</a></article>
-<article class="card"><h2>Design &amp; styling</h2><p>Adjust colors, spacing, typography, responsive layouts, and component styles.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/styles.css">Edit styles ↗</a></article>
-<article class="card"><h2>Website behavior</h2><p>Update the mobile navigation and contact inquiry behavior.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/app.js">Edit site behavior ↗</a></article>
-<article class="card"><h2>Publish &amp; deployment status</h2><p>Review the deployment workflow and confirm whether the latest changes were published successfully.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/actions">Open GitHub Actions ↗</a></article>
+<section class="hero"><div class="eyebrow">Site &amp; product management</div><h1>Keep the shop moving.</h1><p>Update the BZaudio product catalog, maintain the website, and check when changes are published. This page is intentionally simple so it stays easy to use.</p></section>
+<div class="notice"><strong>About access:</strong> There is no separate BZaudio password on this page. However, a public GitHub Pages website cannot securely save changes directly into its own files without an authorized write method. The links below open GitHub’s editor; you need to be signed in with repository edit access to publish changes. That keeps random visitors from adding or changing products on your behalf.</div>
+<section class="grid" aria-label="Management actions">
+<article class="card"><h2>01 / Add or edit products</h2><p>Update the product list that powers the Equipment Shop. Add a product name, category, description, price if confirmed, and optional image or product link.</p><a class="button" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/products.json">Edit shop catalog ↗</a></article>
+<article class="card"><h2>02 / Edit website copy</h2><p>Change service descriptions, training details, headlines, contact options, and other homepage content.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/index.html">Edit website content ↗</a></article>
+<article class="card"><h2>03 / Update the design</h2><p>Adjust the visual theme, responsive layouts, colors, spacing, and typography.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/edit/main/styles.css">Edit site styling ↗</a></article>
+<article class="card"><h2>04 / Publish &amp; check</h2><p>Review automated checks and see whether the latest version has been deployed successfully.</p><a class="button secondary" href="https://github.com/frvp6b8s5m-cloud/BZaudio/actions">Open deployment status ↗</a></article>
 </section>
+<section><p class="eyebrow">Product format</p><h2 style="font:700 30px 'Barlow Condensed',sans-serif;text-transform:uppercase">Example catalog entry</h2><p class="muted">The catalog is a JSON list. Add each item as an object inside the square brackets, separating multiple objects with commas. Use real product details and confirmed prices only.</p><pre class="schema">[
+  {
+    "name": "Product name",
+    "category": "Speakers",
+    "description": "Short, accurate product description.",
+    "price": "$0.00",
+    "image_url": "https://example.com/product-image.jpg",
+    "product_url": "https://example.com/product-page"
+  }
+]</pre><p class="muted">The price, image_url, and product_url fields are optional. If product_url is omitted, the product card offers an email inquiry instead. Changes on GitHub trigger the site's deployment workflow.</p></section>
+<div style="padding:35px 0 60px"><a class="button secondary" href="../">← Return to public website</a></div>
 </main>
-<footer><div class="wrap">BZaudio · Website administration · Changes require a GitHub account with repository write access.</div></footer>
+<footer><div class="wrap">BZaudio · Site &amp; product management · Product inquiries: benrz101@gmail.com</div></footer>
 </body>
 </html>
