@@ -53,3 +53,5 @@
 .catalog-footnote a{color:#405c11;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:760px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.catalog-grid{grid-template-columns:1fr}}
+
+@media (min-width:621px) and (max-width:850px){.nav-links{gap:16px}.hero-spec{width:215px}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
