@@ -1,36 +1,45 @@
 # BZaudio
 
-A responsive, single-page website for BZaudio, focused on professional audio installation, PA system design, and audio equipment. It uses a dark charcoal palette, restrained amber accents, responsive layouts, and reduced-motion support.
+A responsive static website focused on houses of worship and worship sound teams. BZaudio offers PA installation, custom system design, equipment inquiries, system improvements, and practical sound-team training. The brand promise is fast response, helpful guidance, and quality-focused work.
 
-## Files
+## Website
 
-- `index.html` — page content, service sections, equipment information, and inquiry form
-- `styles.css` — visual design, responsive layouts, and accessibility states
-- `app.js` — mobile/tablet navigation, footer year, and inquiry email-draft behavior
-- `admin/index.html` — a shortcut page for editing the site through GitHub
-- `.github/workflows/deploy.yml` — automated site checks and GitHub Pages publishing
+- Public site: https://frvp6b8s5m-cloud.github.io/BZaudio/
+- Site & shop manager: https://frvp6b8s5m-cloud.github.io/BZaudio/admin/
+- Product catalog data: `products.json`
+- Contact email: `benrz101@gmail.com`
 
-## Publishing
+## Main files
 
-The site is hosted as a static GitHub Pages project at:
+- `index.html` — homepage, service descriptions, shop catalog container, training, and contact form
+- `styles.css` — visual design and responsive layouts
+- `app.js` — navigation, product catalog rendering, and inquiry email-draft behavior
+- `products.json` — editable product catalog used by the shop
+- `admin/index.html` — links for editing catalog and website content through GitHub
+- `.github/workflows/deploy.yml` — GitHub Pages publishing
+- `.github/workflows/validate.yml` — automated checks
 
-`https://frvp6b8s5m-cloud.github.io/BZaudio/`
+## Adding products
 
-The management page is available at:
+Edit `products.json` in GitHub. It must remain a valid JSON array. Each product can use these fields:
 
-`https://frvp6b8s5m-cloud.github.io/BZaudio/admin/`
+- `name` — product name
+- `category` — category label, such as Speakers or Mixers
+- `description` — short, accurate description
+- `price` — optional; use only a confirmed price
+- `image_url` — optional image URL
+- `product_url` — optional product page or checkout link. If omitted, the card links to an email inquiry.
 
-This is a project-site path, so it includes `/BZaudio/` before `admin/`. The management page is not a private dashboard or password gate. It contains links to GitHub's editor; GitHub sign-in and repository write permissions control who can save changes. Commits to `main` trigger the deployment workflow.
+A commit to `main` triggers the deployment workflow. The catalog currently has no products entered, so the public shop displays a clear inquiry message until real product details are added.
+
+## Admin access and static-site limitations
+
+The admin page has no separate BZaudio password. However, GitHub Pages is static hosting and cannot safely accept public edits to the live catalog by itself. To publish catalog changes, the editor must sign in to GitHub with repository write access. Do not put a GitHub access token in public website code. A no-login admin that writes directly to the live shop would require a trusted write service or backend, which this GitHub-only setup does not have.
 
 ## Contact form limitation
 
-The form validates the fields and prepares an email draft in the visitor's email app. It does **not** send or store submissions. The form is configured to address drafts to `benrz101@gmail.com`. Visitors still need an email app configured and must review and send the draft themselves. This is not a server-side submission system.
+The contact form validates the required fields and prepares an email draft addressed to `benrz101@gmail.com`. It does **not** send or store submissions. Visitors must review and send the draft in their own email app. Product inquiry cards use the same email-draft approach unless a product URL is supplied.
 
-## Before launch
+## Commerce limitations
 
-1. Replace the temporary typographic mark with the approved BZaudio logo when its image file is available.
-2. Configure the correct BZaudio inquiry email and test the full form flow on desktop and mobile.
-3. Verify the published site and images in a real browser; automated deployment checks do not replace browser testing.
-4. Add a real CMS or backend only if editable products, inventory, or stored inquiry submissions are required. The current GitHub-only site has no checkout, product database, or server-side form handler.
-
-No trading, barter, or marketplace functionality is included.
+The product catalog can display items and link to an external product page if one is supplied. There is currently no built-in cart, payment processing, inventory management, order database, or automatic checkout. These require a commerce provider or server-side functionality. No trading or barter functionality is included.
