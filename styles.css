@@ -3,3 +3,41 @@
 .brand-logo{display:block;width:174px;height:auto;max-height:48px;object-fit:contain}
 .footer-brand .brand-logo{width:154px;max-height:42px}
 @media(max-width:560px){.brand-logo{width:148px;max-height:42px}.footer-brand .brand-logo{width:140px}}
+
+
+/* Professional finishing details */
+:focus-visible{outline:2px solid var(--amber-bright);outline-offset:4px}
+.brand-logo{display:block;width:160px;height:auto;max-height:54px;object-fit:contain}
+.brand{min-width:0}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--amber);outline:2px solid rgba(216,164,95,.22);outline-offset:1px}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;min-width:0}
+.contact-form .form-submit{width:100%;margin-top:8px}
+.form-note{max-width:48ch}
+::selection{background:var(--amber-bright);color:#111}
+@media(max-width:760px){
+  .brand-logo{width:138px;max-height:48px}
+  .site-header{height:74px}
+  .hero{min-height:700px;height:auto;padding:130px 7vw 110px}
+  .hero-side-note{display:none}
+  .hero-index{left:7vw;bottom:35px}
+  .scroll-cue{right:7vw;bottom:32px}
+  .hero-actions{align-items:flex-start;flex-wrap:wrap;gap:18px}
+  .section-kicker{font-size:8px;flex-wrap:wrap}
+  .signal-strip{gap:18px;flex-wrap:wrap;padding:18px 0}
+  .signal-wave{flex-basis:100%;justify-content:flex-start}
+  .service-card{grid-template-columns:28px minmax(0,1fr);gap:14px}
+  .service-visual{grid-column:2;grid-row:1;height:170px}
+  .service-info{grid-column:2;padding-right:46px}
+  .service-number{grid-column:1;grid-row:1 / span 2}
+  .contact-grid{gap:36px}
+}
+@media(max-width:420px){
+  .hero h1{font-size:clamp(46px,13vw,58px)}
+  .hero-actions .button{width:100%}
+  .text-link{padding:6px 0}
+  .section-pad{padding-top:76px;padding-bottom:76px}
+  .intro-grid{padding-top:42px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
