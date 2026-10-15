@@ -77,7 +77,10 @@ required = {
     "form status region": 'id="form-status"' in main_html,
     "mobile navigation button": 'class="menu-toggle"' in main_html,
     "mobile navigation script": "aria-expanded" in app_js and "classList.toggle('open')" in app_js,
-    "email draft handling": "mailto:" in app_js,
+    "email draft handling": "mailto:benrz101@gmail.com?subject=" in app_js,
+    "configured inquiry recipient": "benrz101@gmail.com" in app_js,
+    "required inquiry fields": all(f'name="{field}"' in main_html for field in ("name", "email", "interest", "message")),
+    "inquiry status explanation": "does not send or store" in app_js,
     "tablet navigation breakpoint": "max-width:850px" in css and "min-width:621px" in css,
 }
 for label, passed in required.items():
