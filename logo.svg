@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="title desc">
+  <title id="title">BZaudio</title><desc id="desc">BZaudio wordmark with an amber audio waveform.</desc>
+  <rect width="360" height="96" fill="none"/>
+  <g fill="#f1eee7" font-family="Arial, Helvetica, sans-serif" font-weight="800" letter-spacing="-5">
+    <text x="5" y="66" font-size="62">BZ</text>
+  </g>
+  <g stroke="#d8a45f" stroke-width="4" stroke-linecap="round">
+    <path d="M112 47v10 M124 34v36 M136 23v58 M148 38v28 M160 30v44 M172 43v18"/>
+  </g>
+  <text x="190" y="61" fill="#f1eee7" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="1">audio</text>
+</svg>
