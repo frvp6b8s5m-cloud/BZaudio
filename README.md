@@ -24,7 +24,7 @@ This is a project-site path, so it includes `/BZaudio/` before `admin/`. The man
 
 ## Contact form limitation
 
-The form validates the fields and prepares an email draft in the visitor's email app. It does **not** send or store submissions. No BZaudio recipient email has been configured yet, so the visitor must add the correct recipient in the draft's **To** field before sending. Configure an approved business inbox before advertising this form as a finished lead-capture channel.
+The form validates the fields and prepares an email draft in the visitor's email app. It does **not** send or store submissions. The form is configured to address drafts to `benrz101@gmail.com`. Visitors still need an email app configured and must review and send the draft themselves. This is not a server-side submission system.
 
 ## Before launch
 
