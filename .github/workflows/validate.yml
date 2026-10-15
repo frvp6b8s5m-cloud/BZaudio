@@ -1,0 +1,20 @@
+name: Validate BZaudio website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out BZaudio
+        uses: actions/checkout@v4
+      - name: Check HTML pages and local links
+        run: python3 .github/scripts/check_site.py
+      - name: Check JavaScript syntax
+        run: node --check app.js
