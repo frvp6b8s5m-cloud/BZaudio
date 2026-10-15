@@ -27,7 +27,7 @@
       'Project details:\n' + data.get('message')
     );
     const status = document.querySelector('#form-status');
-    status.textContent = 'Your email app should open with the inquiry prepared. Add the correct BZaudio email address in the To field before sending. This website does not send or store the inquiry.';
-    window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+    if (status) status.textContent = 'Opening your email app with the inquiry addressed to benrz101@gmail.com. Review it and press Send in your email app. This website does not send or store the inquiry.';
+    window.location.href = 'mailto:benrz101@gmail.com?subject=' + subject + '&body=' + body;
   });
 })();
